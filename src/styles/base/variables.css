@@ -1,0 +1,14 @@
+/* Colors */
+:root {
+    --novare-purple: #8a70d6;
+    --novare-light-purple: #d3c7ff;
+    --bbq-white: #fbfbfb;
+    --bbq-white: #424040;
+  }
+  
+  /* Space */
+  :root {
+    --space-small: 8px;
+    --space-medium: 16px;
+    --space-big: 32px;
+  }

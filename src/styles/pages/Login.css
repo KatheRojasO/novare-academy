@@ -32,9 +32,3 @@
   margin-top: 20px;
 }
 
-@media (min-width: 768px) and (min-width: 992px) {
-  .login .container-fluid {
-    max-width: 960px;
-    padding-top: 200px;
-  }
-}

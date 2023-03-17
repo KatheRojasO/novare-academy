@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Didact+Gothic&family=Special+Elite&display=swap");
 
 html {
-  font-family: "Lato", sans-serif;
+  font-family: "Didact Gothic", sans-serif;
 }
 
 body {
@@ -10,15 +9,26 @@ body {
   padding: 0;
 }
 
+.login .container-fluid,
+.signup .container-fluid {
+  max-width: 960px;
+}
+
 .login .submit-btn,
 .signup .submit-btn {
-  background-color: #8a70d6;
+  background-color: var(--novare-purple);
   border: none;
   transition: 0.4s;
 }
 
-
 .login .submit-btn:hover,
 .signup .submit-btn:hover {
-  background-color: #d3c7ff;
+  background-color: var(--novare-light-purple);
+}
+
+@media (min-width: 768px) and (min-width: 992px) {
+  .login .container-fluid,
+  .signup .container-fluid {
+    padding-top: 300px;
+  }
 }
