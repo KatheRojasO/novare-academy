@@ -1,0 +1,27 @@
+.signup .container-fluid {
+  padding: 100px;
+  height: 100vh;
+}
+
+.signup .container-fluid .row .col {
+  display: flex;
+  justify-content: center;
+}
+
+.signup .form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-img {
+  width: 290px;
+  margin: 20px 0;
+}
+
+@media (min-width: 768px) and (min-width: 992px)  {
+  .signup .container-fluid {
+    max-width: 960px;
+    padding-top: 200px;
+  }
+}

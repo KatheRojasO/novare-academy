@@ -1,0 +1,17 @@
+.login input {
+  font-family: "Didact Gothic", sans-serif;
+}
+
+.login .links {
+  font-family: "Didact Gothic", sans-serif;
+  color: #424040;
+}
+
+.login .submit-btn,
+.signup .submit-btn {
+  font-family: "Didact Gothic", sans-serif;
+}
+
+label {
+  font-family: "Didact Gothic", sans-serif;
+}

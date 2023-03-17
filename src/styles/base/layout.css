@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Didact+Gothic&family=Special+Elite&display=swap");
+
+html {
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.login .submit-btn,
+.signup .submit-btn {
+  background-color: #8a70d6;
+  border: none;
+  transition: 0.4s;
+}
+
+
+.login .submit-btn:hover,
+.signup .submit-btn:hover {
+  background-color: #d3c7ff;
+}
