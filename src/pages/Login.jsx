@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link, useNavigate} from "react-router-dom";
 import { login } from "../scripts/auth";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Image from "react-bootstrap/Image";
-import "bootstrap/dist/css/bootstrap.min.css";
 import img from "../assets/images/login.png";
 import logo from "../assets/images/logo.png";
 
@@ -34,7 +34,7 @@ export default function Login() {
       <Container fluid>
         <Row xs={1} lg={2}>
           <Col>
-            <Image src={img} />
+            <Image src={img} className="page-img" />
           </Col>
           <Col>
             <Form className="form-container" onSubmit={(event) => onSubmit(event)}>

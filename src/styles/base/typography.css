@@ -3,14 +3,17 @@
 }
 
 .login .links,
-.signup .links {
+.signup .links,
+.recovery-password .links {
   font-family: "Didact Gothic", sans-serif;
   color: #424040;
 }
 
 .login .submit-btn,
 .signup .submit-btn,
-.signup span {
+.recovery-password .submit-btn,
+.signup span,
+.recovery-password span {
   font-family: "Didact Gothic", sans-serif;
 }
 

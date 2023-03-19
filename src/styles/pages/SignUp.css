@@ -13,8 +13,8 @@
   color: green;
 }
 
-.logo-img {
-  width: 290px;
-  margin: 20px 0;
+@media (min-width: 768px) and (min-width: 992px) {
+  .signup .container-fluid .row .col {
+    align-items: center;
+  }
 }
-

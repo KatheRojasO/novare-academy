@@ -33,7 +33,7 @@ export default function SignUp() {
       <Container fluid>
         <Row xs={1} lg={2}>
           <Col>
-            <Image src={img} />
+            <Image src={img} className="page-img" />
           </Col>
           <Col>
             <Form
