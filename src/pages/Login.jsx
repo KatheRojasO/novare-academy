@@ -16,7 +16,7 @@ export default function Login() {
       <Container fluid>
         <Row xs={1} lg={2}>
           <Col>
-            <Image src={img} fluid />
+            <Image src={img} />
           </Col>
           <Col>
             <Form className="form-container">
@@ -34,10 +34,10 @@ export default function Login() {
               </Button>
               <div className="btn-container">
                 <Link to="/recoverypassword">
-                  <Button className="links">Forgot your password?</Button>
+                  <Button variant="link" className="links">Forgot your password?</Button>
                 </Link>
                 <Link to="/signup">
-                  <Button className="links">Don't have an account?</Button>
+                  <Button variant="link" className="links">Don't have an account?</Button>
                 </Link>
               </div>
             </Form>

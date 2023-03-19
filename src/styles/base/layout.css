@@ -7,11 +7,14 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: "Didact Gothic", sans-serif;
 }
 
 .login .container-fluid,
 .signup .container-fluid {
   max-width: 960px;
+  padding: 100px;
+  height: 100vh;
 }
 
 .login .submit-btn,
@@ -29,6 +32,6 @@ body {
 @media (min-width: 768px) and (min-width: 992px) {
   .login .container-fluid,
   .signup .container-fluid {
-    padding-top: 300px;
+    padding-top: 200px;
   }
 }

@@ -2,13 +2,15 @@
   font-family: "Didact Gothic", sans-serif;
 }
 
-.login .links {
+.login .links,
+.signup .links {
   font-family: "Didact Gothic", sans-serif;
   color: #424040;
 }
 
 .login .submit-btn,
-.signup .submit-btn {
+.signup .submit-btn,
+.signup span {
   font-family: "Didact Gothic", sans-serif;
 }
 

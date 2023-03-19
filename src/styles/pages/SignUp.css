@@ -1,8 +1,3 @@
-.signup .container-fluid {
-  padding: 100px;
-  height: 100vh;
-}
-
 .signup .container-fluid .row .col {
   display: flex;
   justify-content: center;
@@ -12,6 +7,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.signup span {
+  color: green;
 }
 
 .logo-img {
