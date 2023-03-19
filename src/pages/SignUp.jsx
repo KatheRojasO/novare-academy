@@ -11,8 +11,8 @@ import img from "../assets/images/signup.png";
 import logo from "../assets/images/logo.png";
 
 export default function SignUp() {
-  const [email, setEmail] = useState("katherojas@novareacademy.com");
-  const [password, setPassword] = useState("kathe1234");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [formSubmit, setFormSubmit] = useState(false);
   const navigate = useNavigate();
 
@@ -24,7 +24,7 @@ export default function SignUp() {
       setFormSubmit(true);
       navigate('/secret-page')
     } else {
-      alert("Sign up has failed. Try again");
+      alert(`Cannot creat account, ${result.message}!`);
     }
   }
 
