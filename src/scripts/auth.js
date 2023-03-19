@@ -1,4 +1,8 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail,
+} from "firebase/auth";
 import { auth } from "./firebaseSetup";
 
 export async function createAccount(email, password) {
@@ -20,7 +24,7 @@ export async function createAccount(email, password) {
 
 export async function login(email, password) {
   let result = { status: false, payload: "", message: "" };
-    console.log(email, password)
+
   try {
     const user = await signInWithEmailAndPassword(auth, email, password);
     result = {
@@ -33,4 +37,19 @@ export async function login(email, password) {
   }
   return result;
 }
-// export async function recoverAccount(email) {}
+
+export async function recoverAccount(email) {
+  let result = { status: false, payload: "", message: "" };
+
+  try {
+    await sendPasswordResetEmail(auth, email);
+    result = {
+      status: true,
+      payload: "",
+      message: "Link sent",
+    };
+  } catch (error) {
+    result.message = error.code;
+  }
+  return result;
+}
