@@ -1,0 +1,27 @@
+.instructor-footer {
+    background-color: var(--novare-purple);
+    height: 100px;
+}
+
+.instructor-footer .container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icons-container img {
+    width: 30px;
+}
+
+.icons-container p {
+    color: var(--novare-white);
+}
+
+.icons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding-top: 20px;
+}
+
