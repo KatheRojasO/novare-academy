@@ -28,6 +28,40 @@ button:hover {
   background-color: var(--novare-light-purple);
 }
 
-@media (min-width: 768px) and (min-width: 992px) {
-  
-} 
+.login .container,
+.signup .container,
+.recovery-password .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/images/login1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.recovery-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #a9a9a9;
+  border-radius: 10px;
+}
+
+.recovery-form .form-container {
+  padding-bottom: 0;
+}
+
+.recovery-form .links {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .login .container,
+  .signup .container, 
+  .recovery-password .container {
+    background-image: url("../../assets/images/login2.jpeg");
+  }
+}
+

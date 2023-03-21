@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { createAccount } from "../scripts/auth";
 import logo from "../assets/images/logo.svg";
 
-export default function LoginForm() {
+export default function SignupForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();

@@ -2,10 +2,6 @@
 @import "./base/typography.css";
 @import "./base/variables.css";
 
-
-@import "./pages/Login.css";
-@import "./pages/SignUp.css";
-@import "./pages/RecoveryPassword.css";
 @import "./pages/Instructor/InstructorPage.css";
 
 @import "./pages/Instructor/AddCourse.css";
