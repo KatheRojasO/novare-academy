@@ -1,15 +1,8 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./styles/styles.css"
-import Login from "./pages/Login";
-import RecoveryPassword from "./pages/RecoveryPassword";
-import SignUp from "./pages/SignUp";
-import InstructorPage from "./pages/Instructor/InstructorPage";
-import CoursePage from "./pages/Instructor/CoursePage";
-import AddCourse from "./pages/Instructor/AddCourse"
+import Router from "./components/Router";
 import { useCourses } from "./state/CoursesContextProvider";
-import { UserContextProvider } from "./state/UserContextProvider";
 import { readDocuments } from "./scripts/firestore";
+import "./styles/styles.css"
 
 export default function App() {
   const { dispatch } = useCourses();
@@ -34,18 +27,9 @@ export default function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <UserContextProvider>
-          <Routes>
-              <Route path="/" element={<Login />} />
-              <Route path="/instructor-page" element={<InstructorPage />} />
-              <Route path="/course-page" element={<CoursePage />} />
-              <Route path="/add-course" element={<AddCourse />} />
-              <Route path="/recoverypassword" element={<RecoveryPassword />} />
-              <Route path="/signup" element={<SignUp />} />
-          </Routes>
-        </UserContextProvider>
-      </BrowserRouter>
+      {status === 0 && <p>Loading...⏱️</p>}
+      {status === 1 && <Router />}
+      {status === 2 && <p>Error...❌</p>}
     </div>
   );
 }
