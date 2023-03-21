@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import RecoveryPassword from "./pages/RecoveryPassword";
 import SignUp from "./pages/SignUp";
 import InstructorPage from "./pages/Instructor/InstructorPage";
+import CoursePage from "./pages/Instructor/CoursePage";
 import AddCourse from "./pages/Instructor/AddCourse"
 import { useCourses } from "./state/CoursesContextProvider";
 import { UserContextProvider } from "./state/UserContextProvider";
@@ -38,6 +39,7 @@ export default function App() {
           <Routes>
               <Route path="/" element={<Login />} />
               <Route path="/instructor-page" element={<InstructorPage />} />
+              <Route path="/course-page" element={<CoursePage />} />
               <Route path="/add-course" element={<AddCourse />} />
               <Route path="/recoverypassword" element={<RecoveryPassword />} />
               <Route path="/signup" element={<SignUp />} />

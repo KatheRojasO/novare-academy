@@ -1,27 +1,30 @@
 .instructor-footer {
-    background-color: var(--novare-purple);
-    height: 100px;
+  background-color: var(--novare-purple);
+  height: 100px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
 }
 
-.instructor-footer .container{
-    display: flex;
-    justify-content: space-evenly;
+.instructor-footer .container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 10px;
 }
 
 .icons-container img {
-    width: 30px;
+  width: 30px;
 }
 
 .icons-container p {
-    color: var(--novare-white);
+  color: var(--novare-white);
+  margin: 0;
 }
 
 .icons-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
-
