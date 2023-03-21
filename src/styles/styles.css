@@ -6,4 +6,9 @@
 @import "./pages/Login.css";
 @import "./pages/SignUp.css";
 @import "./pages/RecoveryPassword.css";
+@import "./pages/Instructor/InstructorPage.css";
+
+@import "./pages/Instructor/AddCourse.css";
 @import "./components/InstructorFooter.css";
+@import "./components/AddCourseForm.css";
+@import "./components/LoginForm.css";

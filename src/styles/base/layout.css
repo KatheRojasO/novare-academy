@@ -7,48 +7,27 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Didact Gothic", sans-serif;
 }
 
-.login .container-fluid,
-.signup .container-fluid,
-.recovery-password .container-fluid {
-  max-width: 960px;
-  padding: 80px var(--space-big);
-  height: 100vh;
+.container {
+  padding: var(--space-big);
+  margin: 0 auto;
 }
 
-.login .submit-btn,
-.signup .submit-btn,
-.recovery-password .submit-btn {
-  background-color: var(--novare-purple);
+button {
+  padding: var(--space-small);
+  border-radius: 10px;
   border: none;
+  background-color: var(--novare-purple);
+  color: var(--novare-white);
   transition: 0.4s;
+  cursor: pointer;
 }
 
-.login .submit-btn:hover,
-.signup .submit-btn:hover,
-.recovery-password .submit-btn:hover {
+button:hover {
   background-color: var(--novare-light-purple);
 }
 
-.logo-img {
-  width: 250px;
-  margin: 20px 0;
-}
-
 @media (min-width: 768px) and (min-width: 992px) {
-  .login .container-fluid,
-  .signup .container-fluid,
-  .recovery-password .container-fluid {
-    padding-top: 200px;
-  }
-
-  .logo-img {
-    width: 290px;
-  }
-
-  .page-img {
-    width: 350px; 
-  }
-}
+  
+} 

@@ -1,22 +1,18 @@
-.login input {
-  font-family: "Didact Gothic", sans-serif;
+h1 {
+  font-size: 24px;
+  margin: 0;
 }
 
-.login .links,
-.signup .links,
-.recovery-password .links {
-  font-family: "Didact Gothic", sans-serif;
-  color: #424040;
-}
-
-.login .submit-btn,
-.signup .submit-btn,
-.recovery-password .submit-btn,
-.signup span,
-.recovery-password span {
-  font-family: "Didact Gothic", sans-serif;
+h2 {
+  font-size: 20px;
+  margin: 0;
 }
 
 label {
+  font-size: 18px;
+}
+
+button, input {
   font-family: "Didact Gothic", sans-serif;
+  font-size: 15px;
 }
