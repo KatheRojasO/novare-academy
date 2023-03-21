@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import Router from "./components/Router";
 import { useCourses } from "./state/CoursesContextProvider";
 import { readDocuments } from "./scripts/firestore";
-import "./styles/styles.css"
+import "./styles/styles.css";
 
 export default function App() {
   const { dispatch } = useCourses();
   const [status, setStatus] = useState(0);
-  
+
   useEffect(() => {
     async function loadCoursesData(collectionName) {
       const coursesData = await readDocuments(collectionName).catch(onFail);
@@ -23,7 +23,6 @@ export default function App() {
   function onFail() {
     setStatus(2);
   }
-
 
   return (
     <div className="App">

@@ -57,6 +57,10 @@ button:hover {
   margin-bottom: 30px;
 }
 
+.novare-logo {
+  width: 250px;
+}
+
 @media (min-width: 768px) {
   .login .container,
   .signup .container, 
