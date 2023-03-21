@@ -1,0 +1,30 @@
+.add-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-small);
+  margin-bottom: 50px;
+  margin-top: 60px;
+}
+
+.add-form > .message {
+  color: green;
+  font-weight: bold;
+}
+
+.form-inputs > label {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--space-medium);
+}
+
+.add-form-label > input {
+  width: 200px;
+  height: 25px;
+  margin-top: var(--space-small);
+  border-radius: 5px;
+}
+
+
+
+
