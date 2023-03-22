@@ -1,0 +1,26 @@
+.links-page .sections-container .sections {
+  justify-content: space-between;
+  cursor: auto;
+}
+
+.links-page .sections-container .sections .file-name {
+  display: flex;
+}
+
+.links-page .container .logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.links-page .edit-icon {
+  cursor: pointer;
+  margin: 0;
+  width: 26px;
+}
+
+@media (min-width: 768px) {
+  .links-page .sections-container,
+  .links-page .logo-container {
+    padding-left: 80px;
+  }
+}

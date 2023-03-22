@@ -28,7 +28,7 @@ export default function CoursePage() {
             <img src={file} alt="file-img" />
             <h2>Files</h2>
           </div>
-          <div className="sections">
+          <div className="sections" onClick={()=> navigate(`/course-page/${courseInfo.id}/links`)}>
             <img src={file} alt="file-img" />
             <h2>Links</h2>
           </div>
@@ -38,7 +38,6 @@ export default function CoursePage() {
           </div>
         </div>
       </div>
-
       <InstructorFooter />
     </div>
   );

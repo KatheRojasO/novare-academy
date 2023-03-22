@@ -6,29 +6,32 @@ import chevron from "../../assets/icons/chevron.svg";
 import logo from "../../assets/images/logo.png";
 import fileIcon from "../../assets/icons/file.svg";
 import trashCan from "../../assets/icons/trashcan.svg";
+import editIcon from "../../assets/icons/edit.svg";
 
-
-export default function FilesPage() {
+export default function LinksPage() {
   const { courses } = useCourses();
   const navigate = useNavigate();
   const params = useParams();
 
   const courseInfo = courses.find((course) => course.id === params.id);
 
-  const filteredFiles = courseInfo.files.map((file) => (
+  const filteredLinks = courseInfo.links.map((link) => (
     <div className="sections-container">
       <div className="sections">
         <div className="file-name">
           <img src={fileIcon} alt="file-img" />
-          <li>{file}</li>
+          <li>{link}</li>
         </div>
-        <img src={trashCan} alt="file-img" className="trashcan-icon" />
+        <div className="links-icons">
+          <img src={editIcon} alt="file-img" className="edit-icon" />
+          <img src={trashCan} alt="file-img" className="trashcan-icon" />
+        </div>
       </div>
     </div>
   ));
 
   return (
-    <div className="files-page">
+    <div className="links-page">
       <div className="container">
         <div className="logo-container">
           <img
@@ -39,7 +42,7 @@ export default function FilesPage() {
           />
           <img src={logo} alt="novareacademy-logo" className="novare-logo" />
         </div>
-        {filteredFiles}
+        {filteredLinks}
       </div>
       <InstructorFooter />
     </div>

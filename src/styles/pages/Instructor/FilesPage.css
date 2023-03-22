@@ -1,13 +1,13 @@
-.files .sections-container .sections {
+.files-page .sections-container .sections {
   justify-content: space-between;
   cursor:auto;
 }
 
-.files .sections-container .sections .file-name {
+.files-page .sections-container .sections .file-name {
   display: flex;
 }
 
-.files .container .logo-container {
+.files-page .container .logo-container {
   display: flex;
   justify-content: center;
 }
@@ -23,8 +23,8 @@
 }
 
 @media (min-width: 768px) {
-  .files .sections-container,
-  .files .logo-container {
+  .files-page .sections-container,
+  .files-page .logo-container {
     padding-left: 80px;
   }
 }
