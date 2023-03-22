@@ -2,8 +2,11 @@ import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useCourses } from "../../state/CoursesContextProvider";
 import InstructorFooter from "../../components/InstructorFooter";
+import linkIcon from "../../assets/icons/link.svg";
+import userIcon from "../../assets/icons/user.svg";
+import videoIcon from "../../assets/icons/video.svg";
 import logo from "../../assets/images/logo.png";
-import file from "../../assets/icons/file.svg";
+import fileIcon from "../../assets/icons/file.svg";
 
 
 export default function CoursePage() {
@@ -20,20 +23,20 @@ export default function CoursePage() {
           <img src={logo} alt="novareacademy-logo" className="novare-logo" />
         </div>
         <div className="sections-container">
-          <div className="sections">
-            <img src={file} alt="file-img" />
+          <div className="sections" onClick={()=> navigate(`/course-page/${courseInfo.id}/recordings`)} >
+            <img src={videoIcon} alt="file-img" />
             <h2>Recorded Classes</h2>
           </div>
           <div className="sections" onClick={()=> navigate(`/course-page/${courseInfo.id}/files`)}>
-            <img src={file} alt="file-img" />
+            <img src={fileIcon} alt="file-img" />
             <h2>Files</h2>
           </div>
           <div className="sections" onClick={()=> navigate(`/course-page/${courseInfo.id}/links`)}>
-            <img src={file} alt="file-img" />
+            <img src={linkIcon} alt="file-img" />
             <h2>Links</h2>
           </div>
           <div className="sections" onClick={()=> navigate(`/course-page/${courseInfo.id}/student-list`)}>
-            <img src={file} alt="file-img" />
+            <img src={userIcon} alt="file-img" />
             <h2>Students</h2>
           </div>
         </div>
