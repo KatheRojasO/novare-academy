@@ -1,6 +1,6 @@
 export default function UserReducer(state, action) {
     switch (action.type) {
-      case "SET_USER":
+      case "initialise":
         return setUser(action);
     default:
       throw new Error("Unhandled action:", action.type);

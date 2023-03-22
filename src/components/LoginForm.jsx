@@ -17,9 +17,7 @@ export default function LoginForm() {
 
     if (result.status === true) {
       const userDocument = await getUser(email);
-      dispatch({ type: "SET_USER", payload: userDocument });
-
-      console.log(userDocument);
+      dispatch({ type: "initialise", payload: userDocument });
 
       const isInstructor = userDocument.isInstructor;
 
