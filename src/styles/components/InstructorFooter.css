@@ -28,3 +28,21 @@
   align-items: center;
   cursor: pointer;
 }
+
+@media (min-width: 768px) {
+  .instructor-footer {
+    height: 100%;
+    width: 110px;
+  }
+
+  .instructor-footer .container {
+    flex-direction: column;
+    row-gap: 50px;
+    align-content: center;
+    margin-top: 50px;
+  }
+
+  .icons-container img {
+    margin-top: 20px;
+  }
+}
