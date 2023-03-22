@@ -2,8 +2,8 @@ export default function CoursesReducer(state, action) {
     switch (action.type) {
       case "initialise":
         return onInitialise(action);
-    //   case "create":
-    //     return onCreate(state, action);
+       case "create":
+         return onCreate(state, action);
     //   case "update":
     //     return onUpdate(state, action);
     //   case "delete":
@@ -16,4 +16,9 @@ export default function CoursesReducer(state, action) {
   function onInitialise(action) {
     const categories = action.payload;
     return categories;
+  }
+
+  function onCreate(state, action) {
+    const newCourse = action.payload;
+    return [...state, newCourse];
   }

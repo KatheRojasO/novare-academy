@@ -1,20 +1,35 @@
 import React, { useState } from "react";
+import { createCourse } from "../scripts/CoursesCollection";
+import { useCourses } from "../state/CoursesContextProvider";
+import { useUser } from "../state/UserContextProvider";
 
 export default function AddCourseForm() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [formSubmit, setFormSubmit] = useState(false);
 
+  const { user } = useUser();
+  const { dispatch } = useCourses();
+
   function onSubmit(event) {
     event.preventDefault();
 
-    const itemObject = {
+    const courseObject = {
       name: name,
       description: description,
+      instructor: user.name,
+      files: [],
+      links: [],
+      recordings: [],
+      students: []
     };
-    // onCreateItem(itemObject);
-    // setName("");
-    // setDescription("");
+
+    createCourse(courseObject)
+    dispatch({type: "create", payload: courseObject})
+
+    setName("");
+    setDescription("");
+    
     setFormSubmit(true);
     event.target.reset();
   }
