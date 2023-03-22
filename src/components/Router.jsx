@@ -8,6 +8,7 @@ import CoursePage from "../pages/Instructor/CoursePage";
 import FilesPage from "../pages/Instructor/FilesPage";
 import AddCourse from "../pages/Instructor/AddCourse"
 import LinksPage from "../pages/Instructor/LinksPage";
+import StudentListPage from "../pages/Instructor/StudentListPage";
 
 export default function Router() {
   return (
@@ -18,6 +19,7 @@ export default function Router() {
         <Route path="/course-page/:id" element={<CoursePage />} />
         <Route path="/course-page/:id/files" element={<FilesPage />} />
         <Route path="/course-page/:id/links" element={<LinksPage />} />
+        <Route path="/course-page/:id/student-list" element={<StudentListPage />} />
         <Route path="/add-course" element={<AddCourse />} />
         <Route path="/recoverypassword" element={<RecoveryPassword />} />
         <Route path="/signup" element={<SignUp />} />

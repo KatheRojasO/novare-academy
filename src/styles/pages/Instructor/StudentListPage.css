@@ -1,0 +1,26 @@
+.studentlist-page .sections-container .sections {
+    justify-content: space-between;
+    cursor: auto;
+  }
+  
+  .studentlist-page .sections-container .sections .file-name {
+    display: flex;
+  }
+  
+  .studentlist-page .container .logo-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .studentlist-page .edit-icon {
+    cursor: pointer;
+    margin: 0;
+    width: 26px;
+  }
+  
+  @media (min-width: 768px) {
+    .studentlist-page .sections-container,
+    .studentlist-page .logo-container {
+      padding-left: 80px;
+    }
+  }

@@ -32,7 +32,7 @@ export default function CoursePage() {
             <img src={file} alt="file-img" />
             <h2>Links</h2>
           </div>
-          <div className="sections">
+          <div className="sections" onClick={()=> navigate(`/course-page/${courseInfo.id}/student-list`)}>
             <img src={file} alt="file-img" />
             <h2>Students</h2>
           </div>
