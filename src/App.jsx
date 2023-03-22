@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Router from "./components/Router";
 import { useCourses } from "./state/CoursesContextProvider";
-import { readDocuments } from "./scripts/firestore";
+import { readCourses } from "./scripts/CoursesCollection";
 import "./styles/styles.css";
 
 export default function App() {
@@ -10,7 +10,7 @@ export default function App() {
 
   useEffect(() => {
     async function loadCoursesData(collectionName) {
-      const coursesData = await readDocuments(collectionName).catch(onFail);
+      const coursesData = await readCourses(collectionName).catch(onFail);
       onSuccess(coursesData);
     }
     loadCoursesData("courses");

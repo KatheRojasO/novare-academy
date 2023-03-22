@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../scripts/auth";
 import { useUser } from "../state/UserContextProvider";
-import { getUser } from "../scripts/userCollection";
+import { getUser } from "../scripts/UsersCollection";
 import logo from "../assets/images/logo.svg";
 
 export default function LoginForm() {
