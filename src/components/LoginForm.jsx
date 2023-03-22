@@ -20,6 +20,10 @@ export default function LoginForm() {
       dispatch({ type: "initialise", payload: userDocument });
 
       const isInstructor = userDocument.isInstructor;
+      sessionStorage.setItem("email", email);
+      sessionStorage.setItem("id", userDocument.id)
+      sessionStorage.setItem("isInstructor", isInstructor);
+      sessionStorage.setItem("name", userDocument.name);
 
       if (isInstructor) {
         navigate("/instructor-page");
