@@ -8,8 +8,17 @@ import UserReducer from "./UserReducer";
 const UserContext = createContext();
 
 export function UserContextProvider({ children }) {
+  //User from Cache
+  const cachedUser = sessionStorage.getItem("id") ? {
+    "email": sessionStorage.getItem("email"),
+    "id": sessionStorage.getItem("id"),
+    "isInstructor": sessionStorage.getItem("isInstructor"),
+    "name": sessionStorage.getItem("name")
+  }
+  : null;
+
   //State
-  const [user, dispatch] = useReducer(UserReducer, []);
+  const [user, dispatch] = useReducer(UserReducer, cachedUser);
 
   //Properties
   const values = { user, dispatch };
