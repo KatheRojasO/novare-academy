@@ -33,6 +33,13 @@
   width: 300px;
 }
 
+@media (min-width: 768px) {
+  .course-page .sections-container,
+  .course-page .logo-container {
+    padding-left: 100px;
+  }
+}
+
 @media (min-width: 1024px) {
   .sections {
     width: 450px;
