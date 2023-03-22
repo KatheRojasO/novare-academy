@@ -4,6 +4,7 @@
 
 @import "./pages/Instructor/InstructorPage.css";
 @import "./pages/Instructor/CoursePage.css";
+@import "./pages/Instructor/FilesPage.css";
 
 @import "./pages/Instructor/AddCourse.css";
 @import "./components/InstructorFooter.css";

@@ -1,0 +1,30 @@
+.files .sections-container .sections {
+  justify-content: space-between;
+  cursor:auto;
+}
+
+.files .sections-container .sections .file-name {
+  display: flex;
+}
+
+.files .container .logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.goback-icon {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.files li,
+.trashcan-icon {
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .files .sections-container,
+  .files .logo-container {
+    padding-left: 80px;
+  }
+}
