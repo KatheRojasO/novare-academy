@@ -7,6 +7,7 @@
 @import "./pages/Instructor/FilesPage.css";
 @import "./pages/Instructor/LinksPage.css";
 @import "./pages/Instructor/StudentListPage.css";
+@import "./pages/Instructor/RecordingPage.css";
 
 @import "./pages/Instructor/AddCourse.css";
 @import "./components/InstructorFooter.css";

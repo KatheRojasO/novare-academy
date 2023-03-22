@@ -4,23 +4,23 @@ import { useCourses } from "../../state/CoursesContextProvider";
 import InstructorFooter from "../../components/InstructorFooter";
 import chevron from "../../assets/icons/chevron.svg";
 import logo from "../../assets/images/logo.png";
-import linkIcon from "../../assets/icons/link.svg";
+import videoIcon from "../../assets/icons/video.svg";
 import trashCan from "../../assets/icons/trashcan.svg";
 import editIcon from "../../assets/icons/edit.svg";
 
-export default function LinksPage() {
+export default function RecordingPage() {
   const { courses } = useCourses();
   const navigate = useNavigate();
   const params = useParams();
 
   const courseInfo = courses.find((course) => course.id === params.id);
 
-  const filteredLinks = courseInfo.links.map((link) => (
+  const filteredLinks = courseInfo.recordings.map((recording) => (
     <div className="sections-container">
       <div className="sections">
         <div className="file-name">
-          <img src={linkIcon} alt="file-img" />
-          <li>{link}</li>
+          <img src={videoIcon} alt="file-img" />
+          <li>{recording}</li>
         </div>
         <div className="links-icons">
           <img src={editIcon} alt="file-img" className="edit-icon" />
