@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useCourses } from "../../state/CoursesContextProvider";
 import InstructorNavbar from "../../components/InstructorNavbar";
+import addIcon from "../../assets/icons/add.svg";
 import chevron from "../../assets/icons/chevron.svg";
 import logo from "../../assets/images/logo.png";
 import videoIcon from "../../assets/icons/video.svg";
@@ -31,7 +32,7 @@ export default function RecordingPage() {
   ));
 
   return (
-    <div className="links-page">
+    <div className="recording-page">
       <div className="container">
         <div className="logo-container">
           <img
@@ -41,6 +42,16 @@ export default function RecordingPage() {
             onClick={() => navigate(-1)}
           />
           <img src={logo} alt="novareacademy-logo" className="novare-logo" />
+        </div>
+        <div className="add-files-option">
+          <img src={addIcon} alt="add-icon" className="add-icon" />
+          <p>Add a video</p>
+        </div>
+        <div className="warning-text">
+          <p>
+            We strongly recommend to upload your video on Youtube or another
+            platform and share only the link!
+          </p>
         </div>
         {filteredLinks}
       </div>

@@ -1,0 +1,51 @@
+.recording-page .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recording-page .sections-container .sections {
+  justify-content: space-between;
+  cursor: auto;
+}
+
+.recording-page .sections-container .sections .file-name {
+  display: flex;
+}
+
+.recording-page .sections-container .sections .file-name li:hover {
+  border-bottom: 1px solid;
+  cursor: pointer;
+}
+
+.recording-page .container .logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.recording-page .edit-icon {
+  cursor: pointer;
+  margin: 0;
+  width: 26px;
+}
+
+.warning-text {
+  width: 300px;
+  text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .recording-page .sections-container,
+  .recording-page .logo-container,
+  .warning-text  {
+    padding-left: 80px;
+  }
+  
+  .warning-text  {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+  }
+
+  
+}

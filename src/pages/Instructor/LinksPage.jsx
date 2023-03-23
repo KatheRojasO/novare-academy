@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useCourses } from "../../state/CoursesContextProvider";
 import InstructorNavbar from "../../components/InstructorNavbar";
 import chevron from "../../assets/icons/chevron.svg";
+import addIcon from "../../assets/icons/add.svg";
 import logo from "../../assets/images/logo.png";
 import linkIcon from "../../assets/icons/link.svg";
 import trashCan from "../../assets/icons/trashcan.svg";
@@ -41,6 +42,10 @@ export default function LinksPage() {
             onClick={() => navigate(-1)}
           />
           <img src={logo} alt="novareacademy-logo" className="novare-logo" />
+        </div>
+        <div className="add-files-option">
+          <img src={addIcon} alt="add-icon" className="add-icon" />
+          <p>Add a link</p>
         </div>
         {filteredLinks}
       </div>
