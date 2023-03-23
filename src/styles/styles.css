@@ -10,6 +10,6 @@
 @import "./pages/Instructor/RecordingPage.css";
 
 @import "./pages/Instructor/AddCourse.css";
-@import "./components/InstructorFooter.css";
+@import "./components/InstructorNavbar.css";
 @import "./components/AddCourseForm.css";
 @import "./components/Forms.css";

@@ -1,5 +1,5 @@
 import React from "react";
-import InstructorFooter from "../../components/InstructorFooter";
+import InstructorNavbar from "../../components/InstructorNavbar";
 import AddCourseForm from "../../components/AddCourseForm";
 import logo from "../../assets/images/logo.png";
 
@@ -12,7 +12,7 @@ export default function AddCourse() {
         <img src={logo} alt="novare-logo" />
         <AddCourseForm/>
       </div>
-      <InstructorFooter/>
+      <InstructorNavbar/>
     </div>
   );
 }

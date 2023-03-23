@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useCourses } from "../../state/CoursesContextProvider";
-import InstructorFooter from "../../components/InstructorFooter";
+import InstructorNavbar from "../../components/InstructorNavbar";
 import linkIcon from "../../assets/icons/link.svg";
 import userIcon from "../../assets/icons/user.svg";
 import videoIcon from "../../assets/icons/video.svg";
@@ -41,7 +41,7 @@ export default function CoursePage() {
           </div>
         </div>
       </div>
-      <InstructorFooter />
+      <InstructorNavbar />
     </div>
   );
 }
