@@ -4,7 +4,12 @@
   align-items: center;
   padding: var(--space-small);
   margin-bottom: 50px;
-  margin-top: 60px;
+  margin-top: 40px;
+  border: 1px solid;
+  width: 300px;
+  background-color: var(--novare-gray);
+  border-radius: 5px;
+  box-shadow: 0 5px var(--novare-black);
 }
 
 .add-form > .message {
@@ -19,10 +24,18 @@
 }
 
 .add-form-label > input {
-  width: 200px;
+  width: 250px;
   height: 25px;
   margin-top: var(--space-small);
   border-radius: 5px;
+}
+
+.form-title h2 {
+  margin-top: 20px;
+}
+
+.add-button {
+  margin-bottom: 15px;
 }
 
 
