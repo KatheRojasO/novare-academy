@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import addIcon from "../assets/icons/add.png";
 import calendarIcon from "../assets/icons/calendar.png";
 import courseIcon from "../assets/icons/course.png";
@@ -29,14 +29,18 @@ export default function InstructorFooter() {
           />
           <p>Add courses</p>
         </div>
-        <div className="icons-container">
-          <img src={calendarIcon} alt="calendar-logo" />
-          <p>Calendar</p>
-        </div>
-        <div className="icons-container">
-          <img src={slackIcon} alt="slack-logo" />
-          <p>Comunity</p>
-        </div>
+        <Link to="https://calendar.google.com/calendar/u/0/r">
+          <div className="icons-container">
+            <img src={calendarIcon} alt="calendar-logo" />
+            <p>Calendar</p>
+          </div>
+        </Link>
+        <Link to="https://app.slack.com">
+          <div className="icons-container">
+            <img src={slackIcon} alt="slack-logo" />
+            <p>Comunity</p>
+          </div>
+        </Link>
         <div className="icons-container">
           <img src={logoutIcon} alt="logout-logo" />
           <p>Log out</p>
