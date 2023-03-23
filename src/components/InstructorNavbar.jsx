@@ -5,9 +5,18 @@ import calendarIcon from "../assets/icons/calendar.png";
 import courseIcon from "../assets/icons/course.png";
 import slackIcon from "../assets/icons/slack.png";
 import logoutIcon from "../assets/icons/logout.svg";
+import { removeUserSession } from "../scripts/UserSessionHandler";
+import { useUser } from "../state/UserContextProvider";
 
 export default function InstructorFooter() {
+  const { dispatch } = useUser();
   const navigate = useNavigate();
+
+  function logout(){
+    removeUserSession()
+    dispatch({ type: "remove" })
+    navigate("/")
+  }
 
   return (
     <div className="instructor-footer">
@@ -41,7 +50,7 @@ export default function InstructorFooter() {
             <p>Comunity</p>
           </div>
         </Link>
-        <div className="icons-container">
+        <div className="icons-container" onClick={() => logout()}>
           <img src={logoutIcon} alt="logout-logo" />
           <p>Log out</p>
         </div>
