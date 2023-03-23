@@ -4,6 +4,7 @@ import { login } from "../scripts/auth";
 import { useUser } from "../state/UserContextProvider";
 import { getUser } from "../scripts/UsersCollection";
 import logo from "../assets/images/logo.svg";
+import { setUserSession } from "../scripts/UserSessionHandler";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -18,13 +19,9 @@ export default function LoginForm() {
     if (result.status === true) {
       const userDocument = await getUser(email);
       dispatch({ type: "initialise", payload: userDocument });
+      setUserSession(userDocument)
 
       const isInstructor = userDocument.isInstructor;
-      sessionStorage.setItem("email", email);
-      sessionStorage.setItem("id", userDocument.id)
-      sessionStorage.setItem("isInstructor", isInstructor);
-      sessionStorage.setItem("name", userDocument.name);
-
       if (isInstructor) {
         navigate("/instructor-page");
       } else {
