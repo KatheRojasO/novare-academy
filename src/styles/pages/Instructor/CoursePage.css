@@ -13,11 +13,7 @@
   margin: 0 20px;
 }
 
-.logo-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
+
 
 .goback-icon {
   width: 20px;
@@ -38,9 +34,7 @@
   .course-page .logo-container {
     padding-left: 100px;
   }
-}
 
-@media (min-width: 1024px) {
   .sections {
     width: 450px;
   }

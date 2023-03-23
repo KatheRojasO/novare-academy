@@ -57,6 +57,12 @@ button:hover {
   margin-bottom: 30px;
 }
 
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 20px;
+}
+
 .novare-logo {
   width: 250px;
 }
@@ -71,6 +77,10 @@ li {
   .signup .container, 
   .recovery-password .container {
     background-image: url("../../assets/images/login2.jpeg");
+  }
+
+  .novare-logo {
+    width: 300px;
   }
 }
 
