@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useCourses } from "../../state/CoursesContextProvider";
-import Modal from "../../components/AddVideoModal";
+import AddVideoModal from "../../components/AddVideoModal";
 import InstructorNavbar from "../../components/InstructorNavbar";
+import UpdateVideoModal from "../../components/UpdateVideoModal"
 import addIcon from "../../assets/icons/add.svg";
 import chevron from "../../assets/icons/chevron.svg";
 import logo from "../../assets/images/logo.png";
@@ -11,7 +12,8 @@ import trashCan from "../../assets/icons/trashcan.svg";
 import editIcon from "../../assets/icons/edit.svg";
 
 export default function RecordingPage() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+  const [isUpdateModalOpen, setIsUpdateModalOpen] = useState(false);
   const { courses } = useCourses();
   const { dispatch } = useCourses();
   const navigate = useNavigate();
@@ -40,7 +42,13 @@ export default function RecordingPage() {
             src={editIcon}
             alt="file-img"
             className="edit-icon"
-            onClick={() => setIsOpen(true)}
+            onClick={() => setIsUpdateModalOpen(true)}
+          />
+          <UpdateVideoModal
+            course={courseInfo}
+            link={recording}
+            open={isUpdateModalOpen}
+            onClose={() => setIsUpdateModalOpen(false)}
           />
           <img
             src={trashCan}
@@ -67,11 +75,11 @@ export default function RecordingPage() {
         </div>
         <div className="add-files-option">
           <img src={addIcon} alt="add-icon" className="add-icon" />
-          <p onClick={() => setIsOpen(true)}>Add a video</p>
-          <Modal
+          <p onClick={() => setIsAddModalOpen(true)}>Add a video</p>
+          <AddVideoModal
             course={courseInfo}
-            open={isOpen}
-            onClose={() => setIsOpen(false)}
+            open={isAddModalOpen}
+            onClose={() => setIsAddModalOpen(false)}
           />
         </div>
         <div className="warning-text">
