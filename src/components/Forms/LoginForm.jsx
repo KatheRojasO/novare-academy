@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { login } from "../scripts/auth";
-import { useUser } from "../state/UserContextProvider";
-import { getUser } from "../scripts/UsersCollection";
-import logo from "../assets/images/logo.svg";
-import { setUserSession } from "../scripts/UserSessionHandler";
+import { login } from "../../scripts/auth";
+import { useUser } from "../../state/UserContextProvider";
+import { getUser } from "../../scripts/UsersCollection";
+import logo from "../../assets/images/logo.svg";
+import { setUserSession } from "../../scripts/UserSessionHandler";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");

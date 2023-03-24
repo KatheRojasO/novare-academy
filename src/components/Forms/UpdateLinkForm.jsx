@@ -1,41 +1,32 @@
 import React, { useState } from "react";
-import { updateCourse } from "../scripts/CoursesCollection";
-import { useCourses } from "../state/CoursesContextProvider";
+import { updateCourse } from "../../scripts/CoursesCollection";
+import { useCourses } from "../../state/CoursesContextProvider";
 
-export default function LinkForm({ onClick, course }) {
-  const [name, setName] = useState("");
-  const [link, setLink] = useState("");
+export default function UpdateLinkForm({ onClick, course, currentLink }) {
+  const [name, setName] = useState(currentLink.name);
+  const [link, setLink] = useState(currentLink.link);
   const { dispatch } = useCourses();
 
   function onSubmit(event) {
     event.preventDefault();
 
-    const newLink = {
+    const updatedLink = {
       name: name,
       link: link,
     };
 
-    const newLinkList = [...course.links, newLink];
-    const updatedCourse = {
-      id: course.id,
-      name: course.name,
-      description: course.description,
-      instructor: course.instructor,
-      files: course.files,
-      links: newLinkList,
-      recordings: course.recordings,
-      students: course.students,
-    };
-    console.log(updatedCourse)
-    dispatch({ type: "update", payload: updatedCourse });
-    updateCourse(updatedCourse);
+    const clonedCourse = course;
+    const currentLinkIndex = course.links.indexOf(currentLink);
+    clonedCourse.links[currentLinkIndex] = updatedLink;
+    dispatch({ type: "update", payload: clonedCourse });
+    updateCourse(clonedCourse);
     onClick();
   }
 
   return (
     <form className="add--links-form" onSubmit={(event) => onSubmit(event)}>
       <div className="form-title">
-        <h3>Share a link:</h3>
+        <h3>Share a Juan:</h3>
       </div>
       <div className="form-inputs">
         <label>
@@ -59,7 +50,7 @@ export default function LinkForm({ onClick, course }) {
         </label>
       </div>
       <div className="form-button">
-        <button>Add link</button>
+        <button>Update link</button>
       </div>
     </form>
   );

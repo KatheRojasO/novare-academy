@@ -8,8 +8,8 @@ import logo from "../../assets/images/logo.png";
 import linkIcon from "../../assets/icons/link.svg";
 import trashCan from "../../assets/icons/trashcan.svg";
 import editIcon from "../../assets/icons/edit.svg";
-import AddLinkModal from "../../components/AddLinkModal";
-import UpdateLinkModal from "../../components/UpdateLinkModal";
+import AddLinkModal from "../../components/Modals/AddLinkModal";
+import UpdateLinkModal from "../../components/Modals/UpdateLinkModal";
 
 export default function LinksPage() {
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);

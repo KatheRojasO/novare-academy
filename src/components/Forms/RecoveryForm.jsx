@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { recoverAccount } from "../scripts/auth";
-import logo from "../assets/images/logo.svg";
+import { recoverAccount } from "../../scripts/auth";
+import logo from "../../assets/images/logo.svg";
 
 export default function RecoveryPassword() {
   const [email, setEmail] = useState("");

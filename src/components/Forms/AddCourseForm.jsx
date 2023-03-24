@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { createCourse } from "../scripts/CoursesCollection";
-import { useCourses } from "../state/CoursesContextProvider";
-import { useUser } from "../state/UserContextProvider";
+import { createCourse } from "../../scripts/CoursesCollection";
+import { useCourses } from "../../state/CoursesContextProvider";
+import { useUser } from "../../state/UserContextProvider";
 
 export default function AddCourseForm() {
   const [name, setName] = useState("");

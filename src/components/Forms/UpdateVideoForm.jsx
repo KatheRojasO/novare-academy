@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { updateCourse } from "../scripts/CoursesCollection";
-import { useCourses } from "../state/CoursesContextProvider";
+import { updateCourse } from "../../scripts/CoursesCollection";
+import { useCourses } from "../../state/CoursesContextProvider";
 
 export default function UpdateVideoForm({ onClick, course, currentLink }) {
   const [name, setName] = useState(currentLink.name);

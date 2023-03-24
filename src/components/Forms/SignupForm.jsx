@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { createAccount } from "../scripts/auth";
-import logo from "../assets/images/logo.svg";
+import { createAccount } from "../../scripts/auth";
+import logo from "../../assets/images/logo.svg";
 
 export default function SignupForm() {
   const [email, setEmail] = useState("");

@@ -1,5 +1,5 @@
 import React from "react";
-import RecoveryForm from "../components/RecoveryForm";
+import RecoveryForm from "../components/Forms/RecoveryForm";
 
 export default function RecoveryPassword() {
   return (

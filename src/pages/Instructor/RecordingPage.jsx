@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useCourses } from "../../state/CoursesContextProvider";
-import AddVideoModal from "../../components/AddVideoModal";
+import AddVideoModal from "../../components/Modals/AddVideoModal";
 import InstructorNavbar from "../../components/InstructorNavbar";
-import UpdateVideoModal from "../../components/UpdateVideoModal"
+import UpdateVideoModal from "../../components/Modals/UpdateVideoModal"
 import addIcon from "../../assets/icons/add.svg";
 import chevron from "../../assets/icons/chevron.svg";
 import logo from "../../assets/images/logo.png";

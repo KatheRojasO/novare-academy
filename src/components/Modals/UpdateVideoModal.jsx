@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDom from "react-dom";
-import LinkForm from "./LinkForm";
-import closeIcon from "../assets/icons/close.svg"
+import UpdateVideoForm from "../Forms/UpdateVideoForm";
+import closeIcon from "../../assets/icons/close.svg"
 
-export default function AddLinkModal({open, children, onClose, course}) {
+export default function UpdateVideoModal({open, children, onClose, course, link}) {
   if (!open) return null;
 
   return ReactDom.createPortal(
@@ -12,7 +12,7 @@ export default function AddLinkModal({open, children, onClose, course}) {
         <div className="modal-style">
           <img src={closeIcon} alt="close-icon" className="close-icon" onClick={onClose} />
           {children}
-          <LinkForm onClick={onClose} course={course}/>
+          <UpdateVideoForm onClick={onClose} course={course} currentLink={link}/>
         </div>
       </div>
     </>,
