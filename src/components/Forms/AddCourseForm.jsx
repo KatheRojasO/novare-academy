@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { downloadFile } from "../../scripts/CloudStorage/DownloadFile";
+import { uploadFile } from "../../scripts/CloudStorage/UploadFile";
 import { createCourse } from "../../scripts/CoursesCollection";
 import { useCourses } from "../../state/CoursesContextProvider";
 import { useUser } from "../../state/UserContextProvider";
@@ -6,17 +8,23 @@ import { useUser } from "../../state/UserContextProvider";
 export default function AddCourseForm() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+  const [file, setFile] = useState("");
   const [formSubmit, setFormSubmit] = useState(false);
 
   const { user } = useUser();
   const { dispatch } = useCourses();
 
-  function onSubmit(event) {
+  async function onSubmit(event) {
     event.preventDefault();
+
+    const filePath = `course/${name}_${file.name}`;
+    await uploadFile(file, filePath)
+    const fileUrl = await downloadFile(filePath);
 
     const courseObject = {
       name: name,
       description: description,
+      image: fileUrl,
       instructor: user.name,
       files: [],
       links: [],
@@ -56,6 +64,14 @@ export default function AddCourseForm() {
             type="text"
             value={description}
             onChange={(event) => setDescription(event.target.value)}
+          />
+        </label>
+        <label className="add-form-label">
+          File:
+          <input
+            type="file"
+            onChange={(event) => setFile( event.target.files[0])}
+            required
           />
         </label>
       </div>

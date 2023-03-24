@@ -10,6 +10,7 @@ import logo from "../../assets/images/logo.png";
 import videoIcon from "../../assets/icons/video.svg";
 import trashCan from "../../assets/icons/trashcan.svg";
 import editIcon from "../../assets/icons/edit.svg";
+import { updateCourse } from "../../scripts/CoursesCollection";
 
 export default function RecordingPage() {
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
@@ -26,6 +27,7 @@ export default function RecordingPage() {
     const currentVideoIndex = courseInfo.recordings.indexOf(recording);
     clonedCourse.recordings.splice(currentVideoIndex, 1);
     dispatch({ type: "update", payload: clonedCourse });
+    updateCourse(clonedCourse)
   }
 
   const filteredLinks = courseInfo.recordings.map((recording) => (

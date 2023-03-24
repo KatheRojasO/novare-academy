@@ -1,8 +1,6 @@
-// Node modules
 import { ref, uploadBytes } from "firebase/storage";
+import { cloudStorage } from "../Firebase/firebaseSetup";
 
-// Project files
-import { cloudStorage } from "./CloudSetup";
 
 export async function uploadFile(file, filePath) {
   const reference = ref(cloudStorage, filePath);

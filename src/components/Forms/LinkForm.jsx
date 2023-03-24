@@ -26,7 +26,6 @@ export default function LinkForm({ onClick, course }) {
       recordings: course.recordings,
       students: course.students,
     };
-    console.log(updatedCourse)
     dispatch({ type: "update", payload: updatedCourse });
     updateCourse(updatedCourse);
     onClick();

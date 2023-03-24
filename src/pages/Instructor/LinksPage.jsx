@@ -10,6 +10,7 @@ import trashCan from "../../assets/icons/trashcan.svg";
 import editIcon from "../../assets/icons/edit.svg";
 import AddLinkModal from "../../components/Modals/AddLinkModal";
 import UpdateLinkModal from "../../components/Modals/UpdateLinkModal";
+import { updateCourse } from "../../scripts/CoursesCollection";
 
 export default function LinksPage() {
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
@@ -25,6 +26,7 @@ export default function LinksPage() {
     const currentLinkIndex = courseInfo.recordings.indexOf(link);
     clonedCourse.links.splice(currentLinkIndex, 1);
     dispatch({ type: "delete", payload: clonedCourse });
+    updateCourse(clonedCourse)
   }
 
   const filteredLinks = courseInfo.links.map((link) => (
