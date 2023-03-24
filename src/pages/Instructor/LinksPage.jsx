@@ -14,11 +14,18 @@ import UpdateLinkModal from "../../components/UpdateLinkModal";
 export default function LinksPage() {
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [isUpdateModalOpen, setIsUpdateModalOpen] = useState(false);
-  const { courses } = useCourses();
+  const { courses, dispatch } = useCourses();
   const navigate = useNavigate();
   const params = useParams();
 
   const courseInfo = courses.find((course) => course.id === params.id);
+
+  function deleteLink(link) {
+    const clonedCourse = courseInfo;
+    const currentLinkIndex = courseInfo.recordings.indexOf(link);
+    clonedCourse.links.splice(currentLinkIndex, 1);
+    dispatch({ type: "delete", payload: clonedCourse });
+  }
 
   const filteredLinks = courseInfo.links.map((link) => (
     <div className="sections-container">
@@ -37,7 +44,7 @@ export default function LinksPage() {
             open={isUpdateModalOpen}
             onClose={() => setIsUpdateModalOpen(false)}
           />
-          <img src={trashCan} alt="file-img" className="trashcan-icon" />
+          <img src={trashCan} alt="file-img" className="trashcan-icon" onClick={() => deleteLink(link)} />
         </div>
       </div>
     </div>
