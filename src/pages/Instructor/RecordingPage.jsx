@@ -1,6 +1,7 @@
-import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useCourses } from "../../state/CoursesContextProvider";
+import Modal from "../../components/Modal";
 import InstructorNavbar from "../../components/InstructorNavbar";
 import addIcon from "../../assets/icons/add.svg";
 import chevron from "../../assets/icons/chevron.svg";
@@ -10,6 +11,7 @@ import trashCan from "../../assets/icons/trashcan.svg";
 import editIcon from "../../assets/icons/edit.svg";
 
 export default function RecordingPage() {
+  const [isOpen, setIsOpen] = useState(false);
   const { courses } = useCourses();
   const navigate = useNavigate();
   const params = useParams();
@@ -21,7 +23,9 @@ export default function RecordingPage() {
       <div className="sections">
         <div className="file-name">
           <img src={videoIcon} alt="file-img" />
-          <li>{recording}</li>
+          <Link to={recording.link}>
+            <li>{recording.name}</li>
+          </Link>
         </div>
         <div className="links-icons">
           <img src={editIcon} alt="file-img" className="edit-icon" />
@@ -45,7 +49,12 @@ export default function RecordingPage() {
         </div>
         <div className="add-files-option">
           <img src={addIcon} alt="add-icon" className="add-icon" />
-          <p>Add a video</p>
+          <p onClick={() => setIsOpen(true)}>Add a video</p>
+          <Modal
+            course={courseInfo}
+            open={isOpen}
+            onClose={() => setIsOpen(false)}
+          />
         </div>
         <div className="warning-text">
           <p>

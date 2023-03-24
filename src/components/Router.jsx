@@ -25,11 +25,11 @@ export default function Router() {
 
         <Route element={<Protected />}>
           <Route path="/instructor-page" element={<InstructorPage />} />
-          <Route path="/course-page/:id" element={<CoursePage />} />
-          <Route path="/course-page/:id/recordings" element={<RecordingPage />} />
-          <Route path="/course-page/:id/files" element={<FilesPage />} />
-          <Route path="/course-page/:id/links" element={<LinksPage />} />
-          <Route path="/course-page/:id/student-list" element={<StudentListPage />} />
+            <Route path="/course-page/:id" element={<CoursePage />} />
+            <Route path="/course-page/:id/recordings" element={<RecordingPage />} />
+            <Route path="/course-page/:id/files" element={<FilesPage />} />
+            <Route path="/course-page/:id/links" element={<LinksPage />} />
+            <Route path="/course-page/:id/student-list" element={<StudentListPage />} />
           <Route path="/add-course" element={<AddCourse />} />
         </Route>
 
