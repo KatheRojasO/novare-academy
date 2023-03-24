@@ -47,7 +47,7 @@ export default function AddCourseForm() {
         <h2>Add a new course:</h2>
       </div>
       <div className="message">
-        <p>{formSubmit && "The product was created succesfully "}</p>
+        <p>{formSubmit && "Your course was created succesfully "}</p>
       </div>
       <div className="form-inputs">
         <label className="add-form-label">

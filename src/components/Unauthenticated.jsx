@@ -1,8 +1,6 @@
-import { Navigate, Outlet } from "react-router-dom";
-
-import { useUser } from "../state/UserContextProvider";
-
 import React from "react";
+import { Navigate, Outlet } from "react-router-dom";
+import { useUser } from "../state/UserContextProvider";
 
 export default function Unauthenticated() {
   const { user } = useUser();
