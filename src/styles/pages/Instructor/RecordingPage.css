@@ -29,6 +29,11 @@
   width: 26px;
 }
 
+.recording-page .video-icon,
+.recording-page .trashcan-icon {
+  margin: 0 10px;
+}
+
 .warning-text {
   width: 300px;
   text-align: justify;

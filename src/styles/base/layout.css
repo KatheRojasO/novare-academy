@@ -12,6 +12,7 @@ body {
 .container {
   padding: var(--space-big);
   margin: 0 auto;
+  padding-bottom: 110px;
 }
 
 button {
