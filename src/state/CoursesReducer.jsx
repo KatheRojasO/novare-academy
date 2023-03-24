@@ -6,8 +6,8 @@ export default function CoursesReducer(state, action) {
          return onCreate(state, action);
       case "update":
         return onUpdate(state, action);
-    //   case "delete":
-    //     return onDelete(state, action);
+      case "delete":
+        return onDelete(state, action);
       default:
         throw new Error("Unhandled action:", action.type);
     }
@@ -31,5 +31,13 @@ export default function CoursesReducer(state, action) {
     );
     clonedCourses[itemIndex] = updatedCourse;
     return clonedCourses;
+  }
+
+  function onDelete(state, action) {
+    const id = action.payload;
+    const clonedCourse = [...state];
+    const itemIndex = clonedCourse.findIndex((item) => item.id === id);
+    clonedCourse.splice(itemIndex, 1);
+    return clonedCourse;
   }
   

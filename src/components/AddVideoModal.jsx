@@ -3,7 +3,7 @@ import ReactDom from "react-dom";
 import VideoForm from "./VideoForm";
 import closeIcon from "../assets/icons/close.svg"
 
-export default function Modal({open, children, onClose, course}) {
+export default function AddVideoModal({open, children, onClose, course}) {
   if (!open) return null;
 
   return ReactDom.createPortal(

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useCourses } from "../../state/CoursesContextProvider";
-import Modal from "../../components/Modal";
+import Modal from "../../components/AddVideoModal";
 import InstructorNavbar from "../../components/InstructorNavbar";
 import addIcon from "../../assets/icons/add.svg";
 import chevron from "../../assets/icons/chevron.svg";
@@ -13,23 +13,41 @@ import editIcon from "../../assets/icons/edit.svg";
 export default function RecordingPage() {
   const [isOpen, setIsOpen] = useState(false);
   const { courses } = useCourses();
+  const { dispatch } = useCourses();
   const navigate = useNavigate();
   const params = useParams();
 
   const courseInfo = courses.find((course) => course.id === params.id);
 
+  function deleteVideo(recording) {
+    const clonedCourse = courseInfo;
+    const currentVideoIndex = courseInfo.recordings.indexOf(recording);
+    clonedCourse.recordings.splice(currentVideoIndex, 1);
+    dispatch({ type: "update", payload: clonedCourse });
+  }
+
   const filteredLinks = courseInfo.recordings.map((recording) => (
     <div className="sections-container">
       <div className="sections">
         <div className="file-name">
-          <img src={videoIcon} alt="file-img" />
+          <img src={videoIcon} alt="file-img" className="video-icon" />
           <Link to={recording.link}>
             <li>{recording.name}</li>
           </Link>
         </div>
         <div className="links-icons">
-          <img src={editIcon} alt="file-img" className="edit-icon" />
-          <img src={trashCan} alt="file-img" className="trashcan-icon" />
+          <img
+            src={editIcon}
+            alt="file-img"
+            className="edit-icon"
+            onClick={() => setIsOpen(true)}
+          />
+          <img
+            src={trashCan}
+            alt="file-img"
+            className="trashcan-icon"
+            onClick={() => deleteVideo(recording)}
+          />
         </div>
       </div>
     </div>

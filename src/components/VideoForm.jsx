@@ -50,6 +50,7 @@ export default function VideoForm({ onClick, course }) {
             type="text"
             value={name}
             onChange={(event) => setName(event.target.value)}
+            maxLength='30'
             required
           />
         </label>
