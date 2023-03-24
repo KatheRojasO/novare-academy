@@ -1,6 +1,6 @@
 import { collection, query, where} from "firebase/firestore";
 import { getDocs } from "firebase/firestore";
-import { database } from "./firebaseSetup";
+import { database } from "./Firebase/firebaseSetup";
 
 const collectionName = "users";
 const usersCollection = collection(database, collectionName);

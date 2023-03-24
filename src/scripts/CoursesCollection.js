@@ -1,6 +1,6 @@
 import { collection, doc } from "firebase/firestore";
 import { getDocs, addDoc, updateDoc, deleteDoc } from "firebase/firestore";
-import { database } from "./firebaseSetup";
+import { database } from "./Firebase/firebaseSetup";
 
 const collectionName = "courses";
 const coursesCollection = collection(database, collectionName);

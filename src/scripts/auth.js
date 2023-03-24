@@ -3,7 +3,7 @@ import {
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
 } from "firebase/auth";
-import { auth } from "./firebaseSetup";
+import { auth } from "./Firebase/firebaseSetup";
 
 export async function createAccount(email, password) {
   let result = { status: false, payload: "", message: "" };
