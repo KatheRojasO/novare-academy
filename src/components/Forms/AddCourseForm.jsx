@@ -32,8 +32,8 @@ export default function AddCourseForm() {
       students: [],
     };
 
-    createCourse(courseObject);
-    dispatch({ type: "create", payload: courseObject });
+    const newCourse = createCourse(courseObject);
+    dispatch({ type: "create", payload: newCourse });
 
     setName("");
     setDescription("");
