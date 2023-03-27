@@ -5,6 +5,7 @@ import { createCourse } from "../../scripts/CoursesCollection";
 import { useCourses } from "../../state/CoursesContextProvider";
 import { useUser } from "../../state/UserContextProvider";
 
+// code is too long, we teach some tricks to shorten it like putting the courseObject in a json file, among others
 export default function AddCourseForm() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -18,9 +19,11 @@ export default function AddCourseForm() {
     event.preventDefault();
 
     const filePath = `course/${name}_${file.name}`;
-    await uploadFile(file, filePath)
+    await uploadFile(file, filePath);
     const fileUrl = await downloadFile(filePath);
 
+    // although putting the files and links inside the course object works, it limits your capacirty of making more complex changes.
+    // next time try to store each type item inside a collection
     const courseObject = {
       name: name,
       description: description,
@@ -70,7 +73,7 @@ export default function AddCourseForm() {
           File:
           <input
             type="file"
-            onChange={(event) => setFile( event.target.files[0])}
+            onChange={(event) => setFile(event.target.files[0])}
             required
           />
         </label>

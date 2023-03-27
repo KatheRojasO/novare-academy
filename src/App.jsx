@@ -24,6 +24,7 @@ export default function App() {
     setStatus(2);
   }
 
+  // see the difference? this is more easier to read
   return (
     <div className="App">
       {status === 0 && <p>Loading...⏱️</p>}

@@ -8,6 +8,7 @@ import videoIcon from "../../assets/icons/video.svg";
 import logo from "../../assets/images/logo.png";
 import fileIcon from "../../assets/icons/file.svg";
 
+// this is too long -1
 export default function CoursePage() {
   const { courses } = useCourses();
   const params = useParams();

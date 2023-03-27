@@ -12,6 +12,15 @@ export default function SignupForm() {
     event.preventDefault();
     const result = await createAccount(email, password);
 
+    // there is not action after signin up.
+    // you should:
+    /**
+     * There is no action after signin up.
+     * There should be:
+     * 1. A context API for user (or globlal state passing props)
+     * 2. Store the user
+     * 3. Send to a new page
+     */
     if (result.status === true) {
       alert("Logged as User");
     } else {

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { recoverAccount } from "../../scripts/auth";
 import logo from "../../assets/images/logo.svg";
 
+// good but this whole code should be on RecoverPage
 export default function RecoveryPassword() {
   const [email, setEmail] = useState("");
   const [formSubmit, setFormSubmit] = useState(false);

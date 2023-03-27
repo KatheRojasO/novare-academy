@@ -6,6 +6,8 @@ import { getUser } from "../../scripts/UsersCollection";
 import logo from "../../assets/images/logo.svg";
 import { setUserSession } from "../../scripts/UserSessionHandler";
 
+// function length -1
+// the code is too long
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,11 +18,15 @@ export default function LoginForm() {
     event.preventDefault();
     const result = await login(email, password);
 
+    // nesting -1
+    // we have show how to flattern/de-nest this kind of code
+    // using multiple functions
     if (result.status === true) {
       const userDocument = await getUser(email);
       dispatch({ type: "initialise", payload: userDocument });
-      setUserSession(userDocument)
+      setUserSession(userDocument);
 
+      // nesting insde nesting (definitively not good)
       const isInstructor = userDocument.isInstructor;
       if (isInstructor) {
         navigate("/instructor-page");
